@@ -20,7 +20,7 @@ resource "aws_instance" "app_server" {
   key_name = var.chave
   vpc_security_group_ids = [aws_security_group.acesso_geral.id]
     tags = {
-    Name = "Ambiente Prod"
+    Name = "Ambiente Prod Elastico"
   }
 }
 
