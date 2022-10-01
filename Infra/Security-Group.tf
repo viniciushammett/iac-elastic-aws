@@ -1,5 +1,5 @@
 resource "aws_security_group" "acesso_geral" {
-    name = "acesso_geral-2"
+    name = "acesso_geral-Elastico"
     description = "Prod Group"
     ingress{                          #EntradaConexao  
         cidr_blocks = [ "0.0.0.0/0" ] #Bloco IPV4
@@ -16,6 +16,6 @@ resource "aws_security_group" "acesso_geral" {
         protocol = "-1"               #libera todos os tipos de conexões
     }
     tags = {
-      name = "acesso_geral-2"
+      name = "acesso_geral-Elastico"
     } 
 }
