@@ -1,6 +1,5 @@
 resource "aws_security_group" "acesso_geral" {
-    name = "acesso_geral-Elastico"
-    description = "Prod Group"
+    name = var.grupoDeSeguranca
     ingress{                          #EntradaConexao  
         cidr_blocks = [ "0.0.0.0/0" ] #Bloco IPV4
         ipv6_cidr_blocks = [ "::/0" ] #Bloco IPv6

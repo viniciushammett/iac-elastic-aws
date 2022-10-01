@@ -14,14 +14,14 @@ provider "aws" {
   region  = var.regiao_aws
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-08c40ec9ead489470"
+resource "aws_launch_template" "maquina" {
+  image_id = "ami-08c40ec9ead489470"
   instance_type = var.instancia
   key_name = var.chave
-  vpc_security_group_ids = [aws_security_group.acesso_geral.id]
     tags = {
     Name = "Ambiente Prod Elastico"
   }
+  security_group_names = [ var.grupoDeSeguranca ]
 }
 
 resource "aws_key_pair" "chaveSSH" {
