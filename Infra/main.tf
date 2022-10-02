@@ -48,7 +48,7 @@ resource "aws_autoscaling_schedule" "liga" {
   max_size               = 1
   desired_capacity       = 1
   start_time             = timeadd(timestamp(),"10m")
-  recurrence             = "0 7 * * MON-FRI"
+  recurrence             = "0 10 * * MON-FRI"
   autoscaling_group_name = aws_autoscaling_group.grupo.name
 }
 
@@ -58,7 +58,7 @@ resource "aws_autoscaling_schedule" "desliga" {
   max_size               = 1
   desired_capacity       = 0
   start_time             = timeadd(timestamp(),"11m")
-  recurrence             = "0 18 * * MON-FRI"
+  recurrence             = "0 21 * * MON-FRI"
   autoscaling_group_name = aws_autoscaling_group.grupo.name
 }
 
