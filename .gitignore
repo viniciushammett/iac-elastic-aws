@@ -8,5 +8,5 @@
 
 *.pem
 *.pub
-*.Iac-PROD.*
-*.Iac-DEV.*
+*Iac-PROD
+*Iac-DEV
