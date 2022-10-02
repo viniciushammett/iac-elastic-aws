@@ -4,9 +4,7 @@ module "aws-prod" {
     regiao_aws = "us-east-1"
     chave = "Iac-PROD"
     grupoDeSeguranca = "Producao"
-  
-}
-
-output "IP" {
-  value = module.aws-prod.IP-Publico
+    minimo = 1
+    maximo = 10
+    nomeGrupo = "Prod"
 }
